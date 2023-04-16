@@ -1,16 +1,29 @@
 # local-llm
 
-Create a docker container and run `ggml-vicuna-13b`
+The goal of this project is to run an LLM locally and expose via API and streamlit app. The API and streamlit app can be ran via docker-compose services.
 
-- I followed this video https://www.youtube.com/watch?v=-BidzsQYZM4 and created a corresponding dockerfile.
-- build/run dockerfile via `make docker_run`
+- This video was helpful in getting started with `llama_cpp` and the `vicuna` model: https://www.youtube.com/watch?v=-BidzsQYZM4
 
+---
 
+# Running the project
 
+- create/start the docker services via command-line `make docker_run`
+    - This may take some time, the following models are downloaded into the `/code/models` directory of the container:
+        - `ggml-vicuna-13b-1.1-q4_0`
+        - `ggml-alpaca-7b-q4.bin`
+- once services are started, in a separate terminal
+    - run `make streamlit` to open up the streamlit app in your default browser
+    - run `make api_docs` to open of the docs for the FastAPI app
 
-- https://www.reddit.com/r/SteamDeck/comments/12k1d8h/manual_how_to_install_large_language_model_vicuna/
+To test out the API via command-line, run:
 
-https://vicuna.lmsys.org
-
-
+```
 curl -X POST -H "Authorization: Bearer token123" -H "Content-Type: application/json" -d '{"prompt": "Q: What is the capital of France? A: "}' http://localhost:8080/completions
+```
+
+---
+
+# Resources
+
+- https://vicuna.lmsys.org

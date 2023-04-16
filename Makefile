@@ -16,7 +16,7 @@ api_docs:
 	open http://localhost:8080/docs
 
 streamlit:
-	open 'http://0.0.0.0:8501'
+	open http://localhost:8501/
 
 zsh:
 	docker exec -it local-llm-bash-1 /bin/zsh
