@@ -1,5 +1,7 @@
 fastapi
 flake8
+httpx
 llama-cpp-python
 pydantic
 pytest
+uvicorn
