@@ -12,7 +12,7 @@ The goal of this project is to run an LLM locally and expose via API and streaml
     - This may take some time, the following models are downloaded into the `/code/models` directory of the container:
         - `ggml-vicuna-13b-1.1-q4_0`
         - `ggml-alpaca-7b-q4.bin`
-- (optional) you can run unit tests either with the `make tests` command by either:
+- (optional) you can run unit tests (note: these take around 15 seconds to run because I load both models which is slow) either with the `make tests` command by either:
     - attaching VS code to one of the containers and running the command inside the VS Code terminal
     - attaching the command line directly to the container via the command `make zsh`
 - once services are started, in a separate terminal
