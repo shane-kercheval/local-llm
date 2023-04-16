@@ -13,3 +13,4 @@ Create a docker container and run `ggml-vicuna-13b`
 https://vicuna.lmsys.org
 
 
+curl -X POST -H "Authorization: Bearer token123" -H "Content-Type: application/json" -d '{"prompt": "Q: What is the capital of France? A: "}' http://localhost:8080/completions

@@ -1,4 +1,3 @@
-from typing import Optional
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
@@ -21,7 +20,6 @@ print("Model Loaded")
 
 class CompletionRequest(BaseModel):
     prompt: str
-    max_tokens: int = 500
     temperature: float = 0.5
     stop: list[str] = None
 
@@ -48,14 +46,9 @@ def token_required(func):
 @app.post("/completions", response_model=CompletionResponse)
 @token_required
 def completions(request: CompletionRequest):
-    prompt_tokens = model.tokenize(
-        b" " + request.prompt.encode("utf-8")
-    )
-    response = completion(
+    return completion(
         model=model,
         prompt=request.prompt,
-        max_tokens=512 - len(prompt_tokens),
         temperature=request.temperature,
         stop=request.stop,
     )
-    return response

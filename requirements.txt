@@ -1,7 +1,10 @@
+coverage
 fastapi
 flake8
 httpx
 llama-cpp-python
 pydantic
 pytest
+requests
+streamlit
 uvicorn

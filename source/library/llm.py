@@ -34,13 +34,14 @@ def prompt_question(text: str) -> str:
 def completion(
         model: Llama,
         prompt: str,
-        max_tokens: int = 500,
         temperature: float = 0.5,
         stop: str = None) -> CompletionResponse:
 
+    # .tokenize() approach from take from `lamma.py` line 376
+    prompt_tokens = model.tokenize(b" " + prompt.encode("utf-8"))
     output = model.create_completion(
         prompt=prompt,
-        max_tokens=max_tokens,
+        max_tokens=512 - len(prompt_tokens),
         temperature=temperature,
         stop=stop or [],
         # echo=True,

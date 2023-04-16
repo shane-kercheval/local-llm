@@ -1,6 +1,6 @@
 import json
 from source.service.api import CompletionRequest
-from source.library.llm import prompt_question
+from source.library.llm import CompletionResponse, prompt_question
 
 
 def test__completions_endpoint(api_client):
@@ -10,7 +10,6 @@ def test__completions_endpoint(api_client):
     headers = {"Authorization": f"Bearer {token}"}
     # Send a POST request to the API endpoint with the completion parameters
     response = api_client.post("/completions", headers=headers, json=completion_request.dict())
-
     assert response.status_code == 200
     # Parse the JSON response data
     response_data = json.loads(response.text)
@@ -19,6 +18,8 @@ def test__completions_endpoint(api_client):
     assert len(response_data['choices']) > 0
     assert 'text' in response_data['choices'][0]
     assert 'Paris' in response_data['choices'][0]['text']
+    response_object = CompletionResponse.parse_raw(response.text)
+    assert 'Paris' in response_object.choices[0].text
 
 
 def test__401(api_client):
