@@ -12,7 +12,6 @@ logging.config.fileConfig(
 )
 
 API_URL = 'http://api:8080/completions'
-#API_URL = 'http://0.0.0.0:8080/completions'
 TOKEN = 'token123'
 
 
@@ -43,14 +42,6 @@ def get_completions(prompt, temperature) -> CompletionResponse:
     completion_response = CompletionResponse.parse_raw(response.text)
     # Return the completed text
     return completion_response
-
-
-    # data = {"prompt": prompt}
-    # headers = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
-    # response = requests.post(API_URL, headers=headers, json=data)
-    # logging.info("-------------------------")
-    # logging.info(response)
-    # logging.info("-------------------------")
 
 
 # Define the Streamlit app behavior
