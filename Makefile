@@ -19,3 +19,19 @@ notebook:
 
 zsh:
 	docker exec -it local-llm-bash-1 /bin/zsh
+
+
+linting:
+	flake8 source/library
+	flake8 source/service
+	flake8 tests
+
+unittests:
+	coverage run -m pytest --durations=0 tests
+	coverage html
+
+doctests:
+	python -m doctest source/library/api.py
+	python -m doctest source/library/app.py
+
+tests: linting unittests doctests

@@ -1,2 +1,5 @@
+fastapi
 flake8
 llama-cpp-python
+pydantic
+pytest
