@@ -1,7 +1,8 @@
 # local-llm
 
-The goal of this project is to run an LLM locally and expose via API and streamlit app. The API and streamlit app can be ran via docker-compose services.
+The goal of this project is to run an LLM locally and expose the commands via API and streamlit app. The API and streamlit app can be ran via docker-compose services.
 
+- only the `llama_cpp.Llama.create_completion()` function is currently exposed via api/app.
 - This video was helpful in getting started with `llama_cpp` and the `vicuna` model: https://www.youtube.com/watch?v=-BidzsQYZM4
 
 ---
