@@ -35,13 +35,20 @@ def completion(
         model: Llama,
         prompt: str,
         temperature: float = 0.5,
+        model_max_tokens: int = 512,
         stop: str = None) -> CompletionResponse:
-
+    """
+    Args:
+        model_max_tokens:
+            The number of tokens that the `model` can handle.
+            The maximum tokens to generate in the completion is model_max_tokens minus the
+            number of tokens in the prompt.
+    """
     # .tokenize() approach from take from `lamma.py` line 376
     prompt_tokens = model.tokenize(b" " + prompt.encode("utf-8"))
     output = model.create_completion(
         prompt=prompt,
-        max_tokens=512 - len(prompt_tokens),
+        max_tokens=model_max_tokens - len(prompt_tokens),
         temperature=temperature,
         stop=stop or [],
         # echo=True,
