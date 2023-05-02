@@ -17,10 +17,11 @@ TOKEN = 'token123'
 
 # Define the Streamlit app layout
 st.title("Text Completion API")
-prompt = prompt_question(st.text_input(
+prompt = st.text_area(
     "Enter a text prompt:",
-    value="Q: What is the capital of France? A:"
-))
+    value=prompt_question("What is the capital of France?"),
+    height=200,
+)
 temperature = st.slider("Temperature:", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
 # max_tokens = st.slider("Max tokens:", min_value=1, max_value=512, value=16)
 # top_p = st.slider("Top P:", min_value=0.1, max_value=1.0, step=0.1, value=0.9)

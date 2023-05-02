@@ -10,10 +10,14 @@ app = FastAPI()
 
 # Define a security scheme that uses a bearer token
 http_bearer = HTTPBearer()
+N_CONTEXT = 1024
 
 # load the model
 print("Loading model...")
-model = Llama(model_path='./models/ggml-alpaca-7b-q4.bin')
+model = Llama(
+    model_path='./models/ggml-alpaca-7b-q4.bin',
+    n_ctx=N_CONTEXT,
+)
 # model = Llama(model_path='./models/ggml-vicuna-13b-1.1-q4_0.bin')
 print("Model Loaded")
 
@@ -51,4 +55,5 @@ def completions(request: CompletionRequest):
         prompt=request.prompt,
         temperature=request.temperature,
         stop=request.stop,
+        model_max_tokens=N_CONTEXT,
     )
