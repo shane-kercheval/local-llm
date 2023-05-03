@@ -75,7 +75,7 @@ async def _recursive_extract(
         results: set of all of the urls that have been found
     """
     url = remove_fragment(url)
-    if url in visited or len(visited) > 10:
+    if url in visited:
         return
 
     visited.add(url)  # add url to the list of URLs we're building
