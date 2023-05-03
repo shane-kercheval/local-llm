@@ -134,3 +134,17 @@ dmypy.json
 .vscode
 models/*
 .temp/
+
+# exclude data folders by default
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+!data/external/*.csv
+
+!output/log.log
+
+!tests/test_files/datasets/*.csv
+!tests/test_files/datasets/*.pkl
