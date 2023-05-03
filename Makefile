@@ -34,3 +34,11 @@ doctests:
 	python -m doctest source/library/scraping.py
 
 tests: linting unittests
+
+data: data_extract data_transform 
+
+data_extract:
+	python source/service/cli.py extract
+
+data_transform:
+	python source/service/cli.py transform

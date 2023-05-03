@@ -11,6 +11,7 @@ the container run the following examples:
 import logging.config
 import logging
 import click
+from helpsk.logging import Timer
 from library.scraping import scrape_all_urls
 
 # import source.library.openai as openai
@@ -34,9 +35,10 @@ def main() -> None:
 @main.command()
 def extract() -> None:
     """Extracts the data."""
-    logging.info("Scaping Langchain Docs")
-    results = scrape_all_urls('https://python.langchain.com')
-    print(len(results))
+    with Timer("Scraping Langchain Docs"):
+        results = scrape_all_urls('https://python.langchain.com')
+
+    logging.info(f"Scraped {len(results)} pages from Langchain Docs")
     assert len(results) > 500
     assert len(list(results)[0]) == 2
     DATA.langchain_docs.save(results)
