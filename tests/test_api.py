@@ -1,9 +1,12 @@
+"""Tests the functionality of the API."""
+
 import json
+from fastapi.testclient import TestClient
 from source.service.api import CompletionRequest
 from source.library.llm import CompletionResponse, prompt_question
 
 
-def test__completions_endpoint(api_client):
+def test__completions_endpoint(api_client: TestClient) -> None:  # noqa: D103
     prompt = prompt_question("What is the capital of France?")
     completion_request = CompletionRequest(prompt=prompt)
     token = "token123"
@@ -22,7 +25,7 @@ def test__completions_endpoint(api_client):
     assert 'Paris' in response_object.choices[0].text
 
 
-def test__401(api_client):
+def test__401(api_client: TestClient) -> None:  # noqa: D103
     prompt = prompt_question("What is the capital of France?")
     completion_request = CompletionRequest(prompt=prompt)
     token = "invalid"

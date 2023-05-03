@@ -32,6 +32,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN rm requirements.txt
 WORKDIR /code
 
+# RUN pip install git+https://github.com/huggingface/transformers
+
 RUN apt-get update -y && apt-get install zsh -y
 RUN PATH="$PATH:/usr/bin/zsh"
 

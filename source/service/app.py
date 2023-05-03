@@ -1,3 +1,5 @@
+"""Creates a streamlit app that allows takes a prompt and returns a completion request."""
+
 import logging
 import logging.config
 import requests
@@ -8,11 +10,10 @@ from source.service.api import CompletionRequest
 
 logging.config.fileConfig(
     "source/config/logging.conf",
-    disable_existing_loggers=False
+    disable_existing_loggers=False,
 )
 
-API_URL = 'http://api:8080/completions'
-TOKEN = 'token123'
+TOKEN = 'token123'  # matches the dummy token used in api.py
 
 
 # Define the Streamlit app layout
@@ -28,21 +29,20 @@ temperature = st.slider("Temperature:", min_value=0.0, max_value=1.0, step=0.1, 
 
 
 # Define a function to send the completion request to the API endpoint
-def get_completions(prompt, temperature) -> CompletionResponse:
-    # Define the completion parameters
+def get_completions(prompt: str, temperature: float) -> CompletionResponse:
+    """Calls the `completions` endpoint, wrapping the request/response."""
     completion_request = CompletionRequest(
         prompt=prompt,
         temperature=temperature,
     )
-    # Set the Authorization header with the token
     headers = {'Authorization': f'Bearer {TOKEN}'}
-    # Send a POST request to the API endpoint with the completion parameters
-    response = requests.post(API_URL, headers=headers, json=completion_request.dict())
+    response = requests.post(
+        'http://api:8080/completions',
+        headers=headers,
+        json=completion_request.dict(),
+    )
     logging.info(response.text)
-    # Parse the JSON response data
-    completion_response = CompletionResponse.parse_raw(response.text)
-    # Return the completed text
-    return completion_response
+    return CompletionResponse.parse_raw(response.text)
 
 
 # Define the Streamlit app behavior

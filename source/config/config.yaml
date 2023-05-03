@@ -1,0 +1,30 @@
+output:
+  directory: output
+
+data:
+  raw_directory: data/raw
+  interim_directory: data/interim
+  processed_directory: data/processed
+  external_directory: data/external
+
+notebooks:
+  directory: source/notebooks
+
+openai:
+  retry_attempts: 3
+  retry_multiplier: 1
+  retry_max: 10
+  pricing:
+    - model: 'text-embedding-ada-002'
+      price_per_tokens: 0.0004
+      per_x_tokens: 1_000
+    - model: 'text-babbage-001'
+      price_per_tokens: 0.0005
+      per_x_tokens: 1_000
+    - model: 'text-curie-001'
+      price_per_tokens: 0.002
+      per_x_tokens: 1_000
+    - model: 'text-davinci-003'
+      price_per_tokens: 0.02
+      per_x_tokens: 1_000
+  

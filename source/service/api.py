@@ -1,3 +1,5 @@
+"""Creates an API for interacting with the LLM."""
+
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
@@ -23,20 +25,23 @@ print("Model Loaded")
 
 
 class CompletionRequest(BaseModel):
+    """Wraps data needed in the completion request."""
+
     prompt: str
     temperature: float = 0.5
     stop: list[str] = None
 
 
-def token_required(func):
+def token_required(func: callable) -> callable:
+    """Implements logic for checking credentials/token. Dummy Token is currently used."""
     def token_wrapper(
             request: CompletionRequest,
-            credentials: HTTPAuthorizationCredentials = Depends(http_bearer)):
+            credentials: HTTPAuthorizationCredentials = Depends(http_bearer)) -> object:
         try:
             if credentials.scheme != "Bearer":
                 raise HTTPException(
                     status_code=status.HTTP_401_UNAUTHORIZED,
-                    detail="Invalid authentication scheme"
+                    detail="Invalid authentication scheme",
                 )
             if credentials.credentials != 'token123':
                 raise HTTPException(status_code=401, detail="Invalid token")
@@ -49,7 +54,8 @@ def token_required(func):
 
 @app.post("/completions", response_model=CompletionResponse)
 @token_required
-def completions(request: CompletionRequest):
+def completions(request: CompletionRequest) -> CompletionResponse:
+    """Makes a `completion` request on the LLM."""
     return completion(
         model=model,
         prompt=request.prompt,

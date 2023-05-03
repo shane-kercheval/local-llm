@@ -1,10 +1,15 @@
+aiohttp
+beautifulsoup4
+chromadb
 coverage
 fastapi
-flake8
+helpsk
 httpx
+langchain
 llama-cpp-python
 pydantic
 pytest
 requests
+ruff
 streamlit
 uvicorn
