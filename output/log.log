@@ -5,3 +5,113 @@
 2023-05-03 00:54:44 - INFO     | Timer Started: Scraping Langchain Docs
 2023-05-03 00:54:47 - INFO     | Timer Finished: (2.78 seconds)
 2023-05-03 00:54:47 - INFO     | Scraped 10 pages from Langchain Docs
+2023-05-03 00:56:39 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-03 01:03:12 - INFO     | Timer Finished: (392.77 seconds)
+2023-05-03 01:03:12 - INFO     | Scraped 1238 pages from Langchain Docs
+2023-05-03 01:03:12 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-03 01:03:12 - INFO     | Backing up current data `langchain_docs` to `data/raw/langchain_docs.pkl.2023_05_03_01_03_12`
+2023-05-03 02:13:23 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 02:14:51 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 02:23:21 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-03 02:23:21 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-03 02:23:24 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-03 02:23:24 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-03 02:23:24 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-03 02:23:24 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-03 02:23:33 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 02:25:28 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 02:25:28 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 02:25:28 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 02:25:41 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-03 02:25:41 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-03 02:25:44 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-03 02:25:44 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-03 02:25:44 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-03 02:25:44 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-03 02:25:53 - INFO     | Timer Finished: (24.70 seconds)
+2023-05-03 02:25:53 - INFO     | Chunked into 26192 parts.
+2023-05-03 02:25:53 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 02:25:53 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_03_02_25_53`
+2023-05-03 02:32:27 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 02:32:27 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 02:32:27 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 02:32:41 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-03 02:32:41 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-03 02:32:44 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-03 02:32:44 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-03 02:32:44 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-03 02:32:44 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-03 02:32:53 - INFO     | Timer Finished: (25.81 seconds)
+2023-05-03 03:34:33 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 03:34:33 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 03:34:33 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 03:34:46 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-03 03:34:46 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-03 03:34:49 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-03 03:34:49 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-03 03:34:49 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-03 03:34:49 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-03 03:34:58 - INFO     | Timer Finished: (24.81 seconds)
+2023-05-03 03:34:58 - INFO     | Chunked into 26186 parts.
+2023-05-03 03:34:58 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 03:34:58 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_03_03_34_58`
+2023-05-03 21:53:46 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 21:53:46 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_03_21_53_46`
+2023-05-03 22:01:20 - INFO     | Chunked into 26109 parts.
+2023-05-03 22:01:53 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 22:01:53 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_03_22_01_53`
+2023-05-03 22:54:41 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 22:54:42 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 22:54:42 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 23:20:30 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 23:20:31 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 23:20:31 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 23:21:17 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 23:21:17 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 23:21:17 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 23:21:28 - INFO     | Timer Finished: (10.63 seconds)
+2023-05-03 23:25:18 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-03 23:25:19 - INFO     | Transforming 1238 pages from Langchain Docs
+2023-05-03 23:25:19 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-03 23:25:32 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-03 23:25:32 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-03 23:25:35 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-03 23:25:35 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-03 23:25:35 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-03 23:25:35 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-03 23:25:44 - INFO     | Timer Finished: (25.56 seconds)
+2023-05-03 23:25:44 - INFO     | Chunked into 10980 parts.
+2023-05-03 23:25:44 - INFO     | Removed 64 chunks with <= 50 characters.
+2023-05-03 23:25:44 - INFO     | Saving 10916 chunks.
+2023-05-03 23:25:44 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-03 23:25:44 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_03_23_25_44`
+2023-05-04 01:43:37 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 01:43:37 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-04 01:43:37 - INFO     | Running Chroma using direct local API.
+2023-05-04 01:43:37 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-04 01:43:37 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-04 01:43:37 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-04 01:43:37 - INFO     | Using python library for writing JSON byte strings
+2023-05-04 01:43:38 - INFO     | loaded in 43664 embeddings
+2023-05-04 01:43:38 - INFO     | No existing DB found in /code/.vectordb/, skipping load
+2023-05-04 01:43:38 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-04 01:43:39 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-04 01:43:40 - INFO     | Use pytorch device: cpu
+2023-05-04 01:43:40 - INFO     | PersistentDuckDB del, about to run persist
+2023-05-04 01:43:40 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 01:44:25 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 01:44:25 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-04 01:44:25 - INFO     | Running Chroma using direct local API.
+2023-05-04 01:44:25 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-04 01:44:25 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-04 01:44:25 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-04 01:44:25 - INFO     | Using python library for writing JSON byte strings
+2023-05-04 01:44:27 - INFO     | loaded in 43664 embeddings
+2023-05-04 01:44:27 - INFO     | loaded in 1 collections
+2023-05-04 01:44:27 - INFO     | collection with name langchain already exists, returning existing collection
+2023-05-04 01:44:27 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-04 01:44:27 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-04 01:44:28 - INFO     | Use pytorch device: cpu
+2023-05-04 01:49:49 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 01:49:59 - INFO     | PersistentDuckDB del, about to run persist
+2023-05-04 01:49:59 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/

@@ -80,6 +80,10 @@ async def _recursive_extract(
 
     visited.add(url)  # add url to the list of URLs we're building
     url, html = await _fetch_html(session, url)  # overwrite the url in case of redirect
+    # Remove trailing slash from URL to avoid re-visiting same page
+    # e.g `example.com` and `example.com/`
+    if url.endswith('/'):
+        url = url[:-1]
     visited.add(url)  # re-add in case of redirect which would return a different url
     results.add((url, html))
 

@@ -134,6 +134,7 @@ dmypy.json
 .vscode
 models/*
 .temp/
+.vectordb/
 
 # exclude data folders by default
 data/interim/*

@@ -42,3 +42,6 @@ data_extract:
 
 data_transform:
 	python source/service/cli.py transform
+
+embed:
+	python source/service/cli.py embed
