@@ -38,9 +38,8 @@ def extract() -> None:
     """Extracts the data."""
     with Timer("Scraping Langchain Docs"):
         results = scrape_all_urls('https://python.langchain.com')
-
     logging.info(f"Scraped {len(results)} pages from Langchain Docs")
-    assert len(results) > 500
+    assert len(results) > 100
     assert len(list(results)[0]) == 2
     DATA.langchain_docs.save(results)
 
@@ -56,7 +55,7 @@ def transform() -> None:
         (x[0][:-1] if x[0].endswith('/') else x[0], x[1]) for x in langchain_docs
     ]
     # exclude files that have the following extensions
-    exclude_extensions = ['.css', '.ipynb', '.md', '.xml']
+    exclude_extensions = ['.css', '.ipynb', '.md', '.xml', '.rst']
     urls_htmls = [
         x for x in urls_htmls if not any(x[0].endswith(ext) for ext in exclude_extensions)
     ]

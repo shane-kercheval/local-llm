@@ -35,12 +35,12 @@ doctests:
 
 tests: linting unittests
 
-data: data_extract data_transform 
+data: extract transform embed
 
-data_extract:
+extract:
 	python source/service/cli.py extract
 
-data_transform:
+transform:
 	python source/service/cli.py transform
 
 embed:

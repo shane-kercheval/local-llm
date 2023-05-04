@@ -115,3 +115,61 @@
 2023-05-04 01:49:49 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
 2023-05-04 01:49:59 - INFO     | PersistentDuckDB del, about to run persist
 2023-05-04 01:49:59 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 01:58:43 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-04 02:01:23 - INFO     | Timer Finished: (160.16 seconds)
+2023-05-04 02:01:23 - INFO     | Scraped 436 pages from Langchain Docs
+2023-05-04 02:01:59 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-04 02:04:29 - INFO     | Timer Finished: (150.37 seconds)
+2023-05-04 02:04:29 - INFO     | Scraped 436 pages from Langchain Docs
+2023-05-04 02:04:29 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-04 02:04:29 - INFO     | Backing up current data `langchain_docs` to `data/raw/langchain_docs.pkl.2023_05_04_02_04_29`
+2023-05-04 02:04:30 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-04 02:04:30 - INFO     | Transforming 436 pages from Langchain Docs
+2023-05-04 02:04:30 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-04 02:04:32 - INFO     | Timer Finished: (2.13 seconds)
+2023-05-04 02:04:32 - INFO     | Chunked into 1446 parts.
+2023-05-04 02:04:32 - INFO     | Removed 129 chunks with <= 50 characters.
+2023-05-04 02:04:32 - INFO     | Saving 1317 chunks.
+2023-05-04 02:04:32 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 02:04:32 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_04_02_04_32`
+2023-05-04 02:04:33 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 02:04:34 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-04 02:04:34 - INFO     | Running Chroma using direct local API.
+2023-05-04 02:04:34 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-04 02:04:34 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-04 02:04:34 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-04 02:04:34 - INFO     | Using python library for writing JSON byte strings
+2023-05-04 02:04:35 - INFO     | loaded in 54580 embeddings
+2023-05-04 02:04:35 - INFO     | loaded in 1 collections
+2023-05-04 02:04:35 - INFO     | collection with name langchain already exists, returning existing collection
+2023-05-04 02:04:35 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-04 02:04:36 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-04 02:04:36 - INFO     | Use pytorch device: cpu
+2023-05-04 02:04:52 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 02:05:03 - INFO     | PersistentDuckDB del, about to run persist
+2023-05-04 02:05:03 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 02:30:24 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-04 02:30:24 - INFO     | Transforming 436 pages from Langchain Docs
+2023-05-04 02:30:24 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-04 02:30:26 - INFO     | Timer Finished: (1.92 seconds)
+2023-05-04 02:30:26 - INFO     | Chunked into 1446 parts.
+2023-05-04 02:30:26 - INFO     | Removed 129 chunks with <= 50 characters.
+2023-05-04 02:30:26 - INFO     | Saving 1317 chunks.
+2023-05-04 02:30:26 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 02:30:26 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_04_02_30_26`
+2023-05-04 02:30:27 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-04 02:30:27 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-04 02:30:27 - INFO     | Running Chroma using direct local API.
+2023-05-04 02:30:27 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-04 02:30:27 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-04 02:30:27 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-04 02:30:28 - INFO     | Using python library for writing JSON byte strings
+2023-05-04 02:30:28 - INFO     | loaded in 55897 embeddings
+2023-05-04 02:30:28 - INFO     | loaded in 1 collections
+2023-05-04 02:30:28 - INFO     | collection with name langchain already exists, returning existing collection
+2023-05-04 02:30:28 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-04 02:30:29 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-04 02:30:29 - INFO     | Use pytorch device: cpu
+2023-05-04 02:30:43 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-04 02:30:54 - INFO     | PersistentDuckDB del, about to run persist
+2023-05-04 02:30:54 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
