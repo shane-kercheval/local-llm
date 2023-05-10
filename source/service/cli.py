@@ -85,22 +85,6 @@ def transform() -> None:
     chunks = [x for x in chunks if len(x[1]) > 50]
     logging.info(f"Removed {num_chunks - len(chunks)} chunks with <= 50 characters.")
 
-
-
-    # from bs4 import BeautifulSoup
-    # #soup = BeautifulSoup(urls_htmls[700][1])
-    # temp = [x for x in urls_htmls if x[0] == 'https://python.langchain.com/en/latest/modules/agents/tools/examples/requests.html']
-    # soup = BeautifulSoup(temp[0][1], 'html.parser')
-    # soup.text
-    # soup.get_text(separator=' ', strip=True)
-    # urls_htmls[700][1]
-
-    # chunks[1000][1]
-    # chunks[1000][0]
-    # temp = [x for x in chunks if len(x[1]) > 400]
-    # temp[0][0]
-    # temp[0][1]
-
     logging.info(f"Saving {len(chunks)} chunks.")
     DATA.langchain_doc_chunks.save(chunks)
 
@@ -127,7 +111,6 @@ def embed() -> None:
         ids=[str(x) for x in range(len(texts))],
         persist_directory=persist_directory)
     vectordb.persist()
-
 
 
 if __name__ == '__main__':

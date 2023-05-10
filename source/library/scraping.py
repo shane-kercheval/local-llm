@@ -1,6 +1,7 @@
 """Functions for scraping webpages."""
 
 import asyncio
+import logging
 from urllib.parse import urlparse, urlunparse, urljoin
 import aiohttp
 from bs4 import BeautifulSoup
@@ -51,12 +52,19 @@ async def _fetch_html(session: aiohttp.ClientSession, url: str) -> tuple[str, st
     """
     async with session.get(url) as response:
         text = await response.text()
-        return str(response.url), text
+        return response.status, str(response.url), text
+
+
+def url_contains_file_name(url: str) -> bool:
+    if not url:
+        return False
+    return '.' in url.split('/')[-1]
 
 
 async def _recursive_extract(
         session: aiohttp.ClientSession,
         url: str,
+        base_url: str,
         visited: set[str],
         results: set[str]) -> None:
     """
@@ -71,6 +79,7 @@ async def _recursive_extract(
     Args:
         session: ClientSession
         url: the url of the webpage to get the referenced urls
+        base_url: the original/base-url; used to join relative urls to the base-url
         visited: set of all URLs that have already been visited
         results: set of all of the urls that have been found
     """
@@ -79,7 +88,10 @@ async def _recursive_extract(
         return
 
     visited.add(url)  # add url to the list of URLs we're building
-    url, html = await _fetch_html(session, url)  # overwrite the url in case of redirect
+    status, url, html = await _fetch_html(session, url)  # overwrite the url in case of redirect
+    if status == 404:
+        logging.info(f"404: {url}")
+        return
     # Remove trailing slash from URL to avoid re-visiting same page
     # e.g `example.com` and `example.com/`
     if url.endswith('/'):
@@ -87,18 +99,43 @@ async def _recursive_extract(
     visited.add(url)  # re-add in case of redirect which would return a different url
     results.add((url, html))
 
+    # link = list(soup.find_all('a'))[10]
+
     soup = BeautifulSoup(html, 'html.parser')
     for link in soup.find_all('a'):
-        href = link.get('href')
-        if not href:
+        next_url = link.get('href')
+
+        if not next_url:
             continue
 
-        next_url = urljoin(url, href)
-        if not is_same_domain(url, next_url):
+        # urlparse(url)
+        # urlparse(next_url)
+
+        # urljoin(url + "/", next_url)
+
+        # if there is no hostname, it is a partial/relative url and we need to join with base-url
+        if urlparse(next_url).hostname is None:
+            # urljoin('https://python.langchain.com/en/latest/getting_started/getting_started.html', '../modules/models/llms/examples/async_llm.html')
+            # url
+            # next_url
+            if not url.endswith('/') and not url_contains_file_name(url):
+                next_url = urljoin(url + '/', next_url)
+            else:
+                next_url = urljoin(url, next_url)
+
+            # next_url = urljoin(url, next_url)
+
+            # if next_url.startswith('/'):
+            #     next_url = next_url[1:]
+            # if next_url.startswith('../'):
+            #     next_url = next_url[3:]
+            # next_url = base_url + next_url
+        # skip if the domain is different i.e. external url
+        elif not is_same_domain(url, next_url):
             continue
 
         # Recursively scrape the next URL
-        await _recursive_extract(session, next_url, visited, results)
+        await _recursive_extract(session, next_url, base_url, visited, results)
 
 
 async def _scrape_all_urls(url: str) -> list[str]:
@@ -111,7 +148,7 @@ async def _scrape_all_urls(url: str) -> list[str]:
     async with aiohttp.ClientSession() as session:
         visited = set()
         results = set()
-        await _recursive_extract(session, url, visited, results)
+        await _recursive_extract(session, url, url, visited, results)
         return results
 
 
@@ -126,6 +163,14 @@ def scrape_all_urls(url: str) -> set[tuple[str, str]]:
     Args:
         url: url of the base-page.
     """
+    # get the base url using r.url in case the website redirects
+    # e.g `https://python.langchain.com` redirects to `https://python.langchain.com/en/latest`
+    import requests
+    r = requests.get(url)
+    assert r.status_code == 200
+    url = r.url
+    if not url.endswith('/'):
+        url += '/'
     return asyncio.run(_scrape_all_urls(url=url))
 
 

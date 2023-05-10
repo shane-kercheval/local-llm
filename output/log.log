@@ -173,3 +173,112 @@
 2023-05-04 02:30:43 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
 2023-05-04 02:30:54 - INFO     | PersistentDuckDB del, about to run persist
 2023-05-04 02:30:54 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-09 20:49:39 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-09 20:49:39 - INFO     | Transforming 436 pages from Langchain Docs
+2023-05-09 20:53:18 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 20:55:45 - INFO     | Timer Finished: (147.07 seconds)
+2023-05-09 20:55:45 - INFO     | Scraped 450 pages from Langchain Docs
+2023-05-09 20:55:45 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-09 20:55:45 - INFO     | Backing up current data `langchain_docs` to `data/raw/langchain_docs.pkl.2023_05_09_20_55_45`
+2023-05-09 21:09:07 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-09 21:09:07 - INFO     | Transforming 450 pages from Langchain Docs
+2023-05-09 21:11:47 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 21:11:52 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 21:12:46 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-09 21:17:49 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 21:18:01 - INFO     | Timer Finished: (11.30 seconds)
+2023-05-09 21:31:16 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 21:37:02 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 22:13:47 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 22:41:06 - INFO     | Timer Finished: (1639.60 seconds)
+2023-05-09 22:41:06 - INFO     | Scraped 4569 pages from Langchain Docs
+2023-05-09 22:41:06 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-09 22:41:06 - INFO     | Backing up current data `langchain_docs` to `data/raw/langchain_docs.pkl.2023_05_09_22_41_06`
+2023-05-09 22:41:35 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-09 22:41:36 - INFO     | Transforming 4569 pages from Langchain Docs
+2023-05-09 22:42:10 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-09 22:42:45 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-09 22:42:46 - INFO     | Transforming 4569 pages from Langchain Docs
+2023-05-09 22:42:48 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-09 22:43:29 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-09 22:43:29 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-09 22:43:41 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-09 22:43:41 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-09 22:43:41 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-09 22:43:41 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-09 22:44:44 - INFO     | Timer Finished: (116.02 seconds)
+2023-05-09 22:51:57 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 22:56:23 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:01:04 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:03:51 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:06:01 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:10:53 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:13:25 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:17:19 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:17:49 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:25:27 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:27:18 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:31:41 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:32:07 - INFO     | Timer Finished: (26.14 seconds)
+2023-05-09 23:32:22 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:34:16 - INFO     | Timer Finished: (114.40 seconds)
+2023-05-09 23:34:23 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-09 23:37:40 - INFO     | 404: https://python.langchain.com/en/latest/_sources/ecosystem/%5C%22https:/colab.research.google.com/github/hwchase17/langchain/blob/master/docs/ecosystem/comet_tracking.ipynb%5C%22
+2023-05-09 23:37:40 - INFO     | 404: https://python.langchain.com/en/latest/_sources/ecosystem/%5C%22https:/colab.research.google.com/github/hwchase17/langchain/blob/master/docs/ecosystem/clearml_tracking.ipynb%5C%22
+2023-05-09 23:40:07 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/imghp?hl=en&tab=wi%5C%22
+2023-05-09 23:40:07 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/maps.google.com/maps?hl=en&tab=wl%5C%22
+2023-05-09 23:40:07 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/play.google.com/?hl=en&tab=w8%5C%22
+2023-05-09 23:40:08 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.youtube.com/?tab=w1%5C%22
+2023-05-09 23:40:08 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/news.google.com/?tab=wn%5C%22
+2023-05-09 23:40:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/mail.google.com/mail/?tab=wm%5C%22
+2023-05-09 23:40:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/drive.google.com/?tab=wo%5C%22
+2023-05-09 23:40:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/intl/en/about/products?tab=wh%5C%22
+2023-05-09 23:40:10 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22http:/www.google.com/history/optout?hl=en%5C%22
+2023-05-09 23:40:10 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/preferences?hl=en%5C%22
+2023-05-09 23:40:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ%5C%22
+2023-05-09 23:40:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/advanced_search?hl=en&authuser=0%5C%22
+2023-05-09 23:40:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/url?q=https://blog.google/outreach-initiatives/diversity/asian-pacific-american-heritage-month-2023/?utm_source%3Dhpp%26utm_medium%3Downed%26utm_campaign%3Dapahm&source=hpp&id=19035152&ct=3&usg=AOvVaw1zrN82vzhoWl4hz1zZ4gLp&sa=X&ved=0ahUKEwjmj7fr6dT-AhVULUQIHThDB38Q8IcBCAU%5C%22
+2023-05-09 23:40:12 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/ads/%5C%22
+2023-05-09 23:40:12 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/services/%5C%22
+2023-05-09 23:40:13 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/about.html%5C%22
+2023-05-09 23:40:13 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/policies/privacy/%5C%22
+2023-05-09 23:40:14 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/policies/terms/%5C%22
+2023-05-09 23:41:01 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/vectorstores/examples/%5C%22https:/atlas.nomic.ai/dashboard/project/ee2354a3-7f9a-4c6b-af43-b0cda09d7198%5C%22
+2023-05-09 23:41:02 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/vectorstores/examples/%5C%22https:/atlas.nomic.ai/map/ee2354a3-7f9a-4c6b-af43-b0cda09d7198/db996d77-8981-48a0-897a-ff2c22bbf541%5C%22
+2023-05-09 23:41:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/document_loaders/examples/%5C%22http:/twitter.com/download/iphone%5C%22
+2023-05-09 23:41:22 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/document_loaders/examples/%5C%22
+2023-05-09 23:42:14 - INFO     | Timer Finished: (471.26 seconds)
+2023-05-09 23:42:14 - INFO     | Scraped 1245 pages from Langchain Docs
+2023-05-09 23:42:14 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-09 23:42:14 - INFO     | Backing up current data `langchain_docs` to `data/raw/langchain_docs.pkl.2023_05_09_23_42_14`
+2023-05-10 00:15:53 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-10 00:15:54 - INFO     | Transforming 1245 pages from Langchain Docs
+2023-05-10 00:16:19 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-10 00:17:10 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-10 00:17:10 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-10 00:17:21 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-10 00:17:21 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-10 00:17:21 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-10 00:17:21 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-10 00:17:56 - INFO     | Timer Finished: (96.99 seconds)
+2023-05-10 00:19:30 - INFO     | Chunked into 11120 parts.
+2023-05-10 00:19:30 - INFO     | Removed 60 chunks with <= 50 characters.
+2023-05-10 00:19:32 - INFO     | Saving 11060 chunks.
+2023-05-10 00:19:32 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-10 00:19:32 - INFO     | Backing up current data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl.2023_05_10_00_19_32`
+2023-05-10 00:29:49 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-10 00:29:49 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-10 00:29:49 - INFO     | Running Chroma using direct local API.
+2023-05-10 00:29:49 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-10 00:29:49 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-10 00:29:49 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-10 00:29:50 - INFO     | Using python library for writing JSON byte strings
+2023-05-10 00:29:50 - INFO     | loaded in 57214 embeddings
+2023-05-10 00:29:50 - INFO     | loaded in 1 collections
+2023-05-10 00:29:50 - INFO     | collection with name langchain already exists, returning existing collection
+2023-05-10 00:29:50 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-10 00:29:51 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-10 00:29:52 - INFO     | Use pytorch device: cpu
+2023-05-10 00:35:10 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-10 00:35:24 - INFO     | PersistentDuckDB del, about to run persist
+2023-05-10 00:35:24 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/

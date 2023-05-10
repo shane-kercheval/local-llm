@@ -12,7 +12,7 @@ app = FastAPI()
 
 # Define a security scheme that uses a bearer token
 http_bearer = HTTPBearer()
-N_CONTEXT = 1024
+N_CONTEXT = 2048
 
 # load the model
 print("Loading model...")
