@@ -16,3 +16,6 @@ ruff
 streamlit
 tiktoken
 uvicorn
+
+# required for transformers.AutoModelForCausalLM.from_pretrained('mosaicml/mpt-7b-instruct' ...)
+einops
