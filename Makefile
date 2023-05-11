@@ -1,12 +1,14 @@
 .PHONY: tests
 
 docker_build:
+	cp ~/.openai_template.env .
 	docker compose -f docker-compose.yml build
 
 docker_run: docker_build
 	docker compose -f docker-compose.yml up
 
 docker_rebuild:
+	cp ~/.openai_template.env .
 	docker compose -f docker-compose.yml build --no-cache
 
 docker_bash:

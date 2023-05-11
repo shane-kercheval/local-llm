@@ -5,6 +5,8 @@ services:
     working_dir: /code
     volumes:
       - .:/code
+    env_file:
+      - .openai_template.env
     stdin_open: true # docker run -i
     tty: true        # docker run -t
   api:

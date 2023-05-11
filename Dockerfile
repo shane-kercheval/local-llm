@@ -19,7 +19,7 @@ RUN apt-get install -y \
 
 # download models
 WORKDIR /code/models/
-RUN wget https://huggingface.co/eachadea/ggml-vicuna-13b-1.1/resolve/main/ggml-vicuna-13b-1.1-q4_0.bin
+RUN wget https://huggingface.co/eachadea/ggml-vicuna-13b-1.1/resolve/main/ggml-vic13b-q4_0.bin
 RUN wget https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/resolve/main/ggml-alpaca-7b-q4.bin
 
 

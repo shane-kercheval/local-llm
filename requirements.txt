@@ -7,9 +7,12 @@ helpsk
 httpx
 langchain
 llama-cpp-python
+openai
 pydantic
+pypdf
 pytest
 requests
 ruff
 streamlit
+tiktoken
 uvicorn
