@@ -18,10 +18,13 @@ RUN apt-get install -y \
 # RUN make
 
 # download models
-WORKDIR /code/models/
-RUN wget https://huggingface.co/eachadea/ggml-vicuna-13b-1.1/resolve/main/ggml-vic13b-q4_0.bin
-RUN wget https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/resolve/main/ggml-alpaca-7b-q4.bin
-
+WORKDIR /llms/models/
+RUN wget https://huggingface.co/eachadea/ggml-vicuna-13b-1.1/resolve/main/ggml-vic13b-q5_1.bin
+# getting this for alpaca model; author for vicuna updated to latest version but couldn't find
+# latest version of alpaca; re-add at later time
+# error loading model: this format is no longer supported (see https://github.com/ggerganov/llama.cpp/pull/1305)
+# llama_init_from_file: failed to load model
+# RUN wget https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/resolve/main/ggml-alpaca-7b-q4.bin
 
 # install python packages
 WORKDIR /code

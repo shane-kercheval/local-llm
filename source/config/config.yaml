@@ -7,6 +7,10 @@ data:
   processed_directory: data/processed
   external_directory: data/external
 
+llms:
+  ggml-alpaca-7b: '/llms/models/ggml-alpaca-7b-q4.bin'
+  ggml-vicuna-13b: '/llms/models/ggml-vic13b-q5_1.bin'
+
 notebooks:
   directory: source/notebooks
 

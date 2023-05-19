@@ -18,3 +18,5 @@ def test_config_values_are_not_empty() -> None:
     assert_string_not_empty(config.DIR_DATA_EXTERNAL)
     assert_string_not_empty(config.DIR_DATA_PROCESSED)
     assert_string_not_empty(config.DIR_NOTEBOOKS)
+    assert_string_not_empty(config.LLM_ALPACA_7B)
+    assert_string_not_empty(config.LLM_VICUNA_13B)

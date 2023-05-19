@@ -56,6 +56,10 @@ async def _fetch_html(session: aiohttp.ClientSession, url: str) -> tuple[str, st
 
 
 def url_contains_file_name(url: str) -> bool:
+    """
+    Indicates whether or not the url contains a file name, which currently means whether or not a
+    '.' appears in the section of the url after the last '/'.
+    """
     if not url:
         return False
     return '.' in url.split('/')[-1]
@@ -108,28 +112,13 @@ async def _recursive_extract(
         if not next_url:
             continue
 
-        # urlparse(url)
-        # urlparse(next_url)
-
-        # urljoin(url + "/", next_url)
-
         # if there is no hostname, it is a partial/relative url and we need to join with base-url
         if urlparse(next_url).hostname is None:
-            # urljoin('https://python.langchain.com/en/latest/getting_started/getting_started.html', '../modules/models/llms/examples/async_llm.html')
-            # url
-            # next_url
             if not url.endswith('/') and not url_contains_file_name(url):
                 next_url = urljoin(url + '/', next_url)
             else:
                 next_url = urljoin(url, next_url)
 
-            # next_url = urljoin(url, next_url)
-
-            # if next_url.startswith('/'):
-            #     next_url = next_url[1:]
-            # if next_url.startswith('../'):
-            #     next_url = next_url[3:]
-            # next_url = base_url + next_url
         # skip if the domain is different i.e. external url
         elif not is_same_domain(url, next_url):
             continue

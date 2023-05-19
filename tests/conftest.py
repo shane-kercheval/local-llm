@@ -5,18 +5,19 @@ from llama_cpp import Llama
 from fastapi.testclient import TestClient
 from library.dataset_types import CsvDataLoader, DatasetsBase, PickledDataLoader
 from source.service.api import app
+import source.config.config as config
+
+
+# @pytest.fixture(scope='session')
+# def alpaca_model() -> Llama:
+#     """Returns an alpaca LLM."""
+#     return Llama(model_path='./models/ggml-alpaca-7b-q4.bin', verbose=False)
 
 
 @pytest.fixture(scope='session')
-def alpaca_model() -> Llama:
-    """Returns an alpaca LLM."""
-    return Llama(model_path='./models/ggml-alpaca-7b-q4.bin', verbose=False)
-
-
-@pytest.fixture(scope='session')
-def vicuna_model() -> Llama:
+def llm_model() -> Llama:
     """Returns an vicuna LLM."""
-    return Llama(model_path='./models/ggml-vicuna-13b-1.1-q4_0.bin', verbose=False)
+    return Llama(model_path=config.LLM_VICUNA_13B, verbose=False)
 
 
 @pytest.fixture(scope='session')

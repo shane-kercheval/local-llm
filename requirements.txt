@@ -7,6 +7,8 @@ helpsk
 httpx
 langchain
 llama-cpp-python
+lxml
+nest-asyncio
 openai
 pydantic
 pypdf

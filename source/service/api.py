@@ -6,7 +6,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
 from llama_cpp import Llama
 from source.library.llm import completion, CompletionResponse
-
+import source.config.config as config
 
 app = FastAPI()
 
@@ -17,7 +17,7 @@ N_CONTEXT = 2048
 # load the model
 print("Loading model...")
 model = Llama(
-    model_path='./models/ggml-alpaca-7b-q4.bin',
+    model_path=config.LLM_VICUNA_13B,
     n_ctx=N_CONTEXT,
 )
 # model = Llama(model_path='./models/ggml-vicuna-13b-1.1-q4_0.bin')

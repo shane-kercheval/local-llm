@@ -17,3 +17,6 @@ DIR_DATA_INTERIM = CONFIG['data']['interim_directory']
 DIR_DATA_EXTERNAL = CONFIG['data']['external_directory']
 DIR_DATA_PROCESSED = CONFIG['data']['processed_directory']
 DIR_NOTEBOOKS = CONFIG['notebooks']['directory']
+
+LLM_ALPACA_7B = CONFIG['llms']['ggml-alpaca-7b']
+LLM_VICUNA_13B = CONFIG['llms']['ggml-vicuna-13b']

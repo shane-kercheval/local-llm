@@ -282,3 +282,66 @@
 2023-05-10 00:35:10 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
 2023-05-10 00:35:24 - INFO     | PersistentDuckDB del, about to run persist
 2023-05-10 00:35:24 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-19 17:23:29 - INFO     | Timer Started: Scraping Langchain Docs
+2023-05-19 17:27:05 - INFO     | 404: https://python.langchain.com/en/latest/modules/indexes/retrievers/examples/self_query_retriever.html
+2023-05-19 17:27:08 - INFO     | 404: https://python.langchain.com/en/latest/_sources/integrations/%5C%22https:/colab.research.google.com/github/hwchase17/langchain/blob/master/docs/ecosystem/comet_tracking.ipynb%5C%22
+2023-05-19 17:27:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/integrations/%5C%22https:/colab.research.google.com/github/hwchase17/langchain/blob/master/docs/ecosystem/clearml_tracking.ipynb%5C%22
+2023-05-19 17:29:54 - INFO     | 404: https://python.langchain.com/en/latest/tracing.html
+2023-05-19 17:30:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/imghp?hl=en&tab=wi%5C%22
+2023-05-19 17:30:09 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/maps.google.com/maps?hl=en&tab=wl%5C%22
+2023-05-19 17:30:10 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/play.google.com/?hl=en&tab=w8%5C%22
+2023-05-19 17:30:10 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.youtube.com/?tab=w1%5C%22
+2023-05-19 17:30:10 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/news.google.com/?tab=wn%5C%22
+2023-05-19 17:30:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/mail.google.com/mail/?tab=wm%5C%22
+2023-05-19 17:30:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/drive.google.com/?tab=wo%5C%22
+2023-05-19 17:30:11 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/intl/en/about/products?tab=wh%5C%22
+2023-05-19 17:30:12 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22http:/www.google.com/history/optout?hl=en%5C%22
+2023-05-19 17:30:12 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/preferences?hl=en%5C%22
+2023-05-19 17:30:13 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ%5C%22
+2023-05-19 17:30:13 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/advanced_search?hl=en&authuser=0%5C%22
+2023-05-19 17:30:14 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22https:/www.google.com/url?q=https://blog.google/outreach-initiatives/diversity/asian-pacific-american-heritage-month-2023/?utm_source%3Dhpp%26utm_medium%3Downed%26utm_campaign%3Dapahm&source=hpp&id=19035152&ct=3&usg=AOvVaw1zrN82vzhoWl4hz1zZ4gLp&sa=X&ved=0ahUKEwjmj7fr6dT-AhVULUQIHThDB38Q8IcBCAU%5C%22
+2023-05-19 17:30:14 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/ads/%5C%22
+2023-05-19 17:30:14 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/services/%5C%22
+2023-05-19 17:30:15 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/about.html%5C%22
+2023-05-19 17:30:15 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/policies/privacy/%5C%22
+2023-05-19 17:30:15 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/agents/tools/examples/%5C%22/intl/en/policies/terms/%5C%22
+2023-05-19 17:31:07 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/vectorstores/examples/%5C%22https:/atlas.nomic.ai/dashboard/project/ee2354a3-7f9a-4c6b-af43-b0cda09d7198%5C%22
+2023-05-19 17:31:07 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/vectorstores/examples/%5C%22https:/atlas.nomic.ai/map/ee2354a3-7f9a-4c6b-af43-b0cda09d7198/db996d77-8981-48a0-897a-ff2c22bbf541%5C%22
+2023-05-19 17:31:13 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/document_loaders/examples/%5C%22http:/twitter.com/download/iphone%5C%22
+2023-05-19 17:31:19 - INFO     | 404: https://python.langchain.com/en/latest/_sources/modules/indexes/document_loaders/examples/%5C%22
+2023-05-19 17:32:14 - INFO     | 404: https://python.langchain.com/en/latest/ecosystem/promptlayer.html
+2023-05-19 17:32:34 - INFO     | Timer Finished: (545.84 seconds)
+2023-05-19 17:32:34 - INFO     | Scraped 1339 pages from Langchain Docs
+2023-05-19 17:32:34 - INFO     | Saving data `langchain_docs` to `data/raw/langchain_docs.pkl`
+2023-05-19 17:32:37 - INFO     | Loading data `langchain_docs` from `data/raw/langchain_docs.pkl`
+2023-05-19 17:32:37 - INFO     | Transforming 1339 pages from Langchain Docs
+2023-05-19 17:32:37 - INFO     | Timer Started: Chunking Langchain Docs
+2023-05-19 17:32:37 - WARNING  | Could not import azure.core python package.
+2023-05-19 17:33:26 - WARNING  | Created a chunk of size 1510, which is longer than the specified 400
+2023-05-19 17:33:26 - WARNING  | Created a chunk of size 437, which is longer than the specified 400
+2023-05-19 17:33:33 - WARNING  | Created a chunk of size 426, which is longer than the specified 400
+2023-05-19 17:33:33 - WARNING  | Created a chunk of size 426, which is longer than the specified 400
+2023-05-19 17:33:33 - WARNING  | Created a chunk of size 426, which is longer than the specified 400
+2023-05-19 17:33:37 - WARNING  | Created a chunk of size 505, which is longer than the specified 400
+2023-05-19 17:33:37 - WARNING  | Created a chunk of size 815, which is longer than the specified 400
+2023-05-19 17:33:37 - WARNING  | Created a chunk of size 872, which is longer than the specified 400
+2023-05-19 17:33:37 - WARNING  | Created a chunk of size 660, which is longer than the specified 400
+2023-05-19 17:34:08 - INFO     | Timer Finished: (91.02 seconds)
+2023-05-19 17:34:08 - INFO     | Chunked into 12395 parts.
+2023-05-19 17:34:08 - INFO     | Removed 66 chunks with <= 50 characters.
+2023-05-19 17:34:08 - INFO     | Saving 12329 chunks.
+2023-05-19 17:34:08 - INFO     | Saving data `langchain_doc_chunks` to `data/processed/langchain_doc_chunks.pkl`
+2023-05-19 17:34:10 - INFO     | Loading data `langchain_doc_chunks` from `data/processed/langchain_doc_chunks.pkl`
+2023-05-19 17:34:10 - WARNING  | Could not import azure.core python package.
+2023-05-19 17:34:11 - INFO     | Anonymized telemetry enabled. See https://docs.trychroma.com/telemetry for more information.
+2023-05-19 17:34:11 - INFO     | Running Chroma using direct local API.
+2023-05-19 17:34:11 - WARNING  | Using embedded DuckDB with persistence: data will be stored in: /code/.vectordb/
+2023-05-19 17:34:11 - INFO     | Successfully imported ClickHouse Connect C data optimizations
+2023-05-19 17:34:11 - INFO     | Successfully import ClickHouse Connect C/Numpy optimizations
+2023-05-19 17:34:11 - INFO     | Using python library for writing JSON byte strings
+2023-05-19 17:34:11 - INFO     | No existing DB found in /code/.vectordb/, skipping load
+2023-05-19 17:34:11 - INFO     | No existing DB found in /code/.vectordb/, skipping load
+2023-05-19 17:34:11 - WARNING  | No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2023-05-19 17:34:13 - INFO     | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2023-05-19 17:37:55 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
+2023-05-19 17:37:55 - INFO     | Persisting DB to disk, putting it in the save folder: /code/.vectordb/
